@@ -5,19 +5,42 @@
   border: 1px solid red;
   margin:0;
   padding:0;
+  font-family: Helvetica, "Times New Roman";
 }
 
 a {
   text-decoration: none;
-  color: rgb(54, 218, 21);
+  color: rgb(154, 418, 21);
   
   transition-property: background color;
-  transition-duration: 1s;
+  transition-duration: 0.7s;
   
+  font-size:1.2em;
+
+  padding: 10%;
 
 }
-  
 
+main {
+  position: relative;
+  background-image: url("../photos/hb.png");
+  background-repeat: no-repeat;
+  background-position: cover;
+  opacity: 0.8;
+  z-index:50;
+}
+
+nav {
+  position: relative;
+  z-index: 100;
+}
+  
+footer {
+  position: relative; /*need for z-index to work */
+  z-index: 100;
+
+  background-color: white;
+}
 
 /*Navigation bar styles*/
 
@@ -25,7 +48,7 @@ a {
 .navbar {
   
   background-color: rgba(102,255,255,0.2);
-  
+  clear: both;
   width: 100%;
   text-decoration: none;
   position: fixed;
@@ -66,3 +89,9 @@ nav a:hover {
 
 
 /*Media Queries for responsive web design*/
+@media (max-width: 250px) {
+  nav a {
+    
+    width: 100%;
+  }
+}
