@@ -8,24 +8,11 @@
   font-family: Helvetica, "Times New Roman";
 }
 
-a {
-  text-decoration: none;
-  color: rgb(154, 418, 21);
-  
-  transition-property: background color;
-  transition-duration: 0.7s;
-  
-  font-size:1.2em;
-
-  padding: 10%;
-
-}
-
 main {
   position: relative;
   background-image: url("../photos/hb.png");
   background-repeat: no-repeat;
-  background-position: cover;
+  background-size: 100% 100%;
   opacity: 0.8;
   z-index:50;
 }
@@ -35,18 +22,20 @@ nav {
   z-index: 100;
 }
   
-footer {
-  position: relative; /*need for z-index to work */
-  z-index: 100;
 
-  background-color: white;
+footer {
+  background-color: gray;
+  height: 100%;
+  width: 100%;
+  bottom:0;
 }
+
 
 /*Navigation bar styles*/
 
 
 .navbar {
-  
+  top: 0; /* set top 0PX from nearest ancestor */
   background-color: rgba(102,255,255,0.2);
   clear: both;
   width: 100%;
@@ -64,6 +53,19 @@ footer {
 
 }
 
+a {
+  text-decoration: none;
+  color: rgb(154, 418, 21);
+  
+  transition-property: background color;
+  transition-duration: 0.7s;
+  
+  font-size:1.2em;
+
+  padding: 10%;
+
+}
+
 nav a:hover {
   
   color: rgba(200,6,93,0.2);
@@ -78,18 +80,40 @@ nav a:hover {
 
 
 
+/*Main test to see if boxes within main are transparent too or if can apply a z-index to change*/
+/*Update: Apparently you can!*/
+.makeit {
+  background-color: white;
+  position: relative;
+  z-index: 200;
+  width: 50%;
+}
 
 
 
+
+
+
+
+/*Recap top, bottom, left, right can help get rid of unecessary spaces!*/
 /*Footer styles*/
 
+
+
+/*for the top half of footer*/
+.sxfont-tophalf {
+  font-weight: 900;
+  color: purple;
+  text-align: center;
+  
+}
 
 
 
 
 
 /*Media Queries for responsive web design*/
-@media (max-width: 250px) {
+@media (max-width: 287px) {
   nav a {
     
     width: 100%;
