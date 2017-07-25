@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Head information -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<!--  -->
+
+<body>
+
+<section>
+  <nav class="fixed-container navbar">
+    <a href="index.html">Home</a>
+    <a href="/html/index2.html" >About</a>
+    <a href="#/html/index3.html">Portfolio</a>
+    <a href="#/html/index3.html">Contact</a>
+  </nav>
+</section>
+
+
+
+<header style="text-align: top;">  <!--for the slideshow which changes every 9 seconds -->
+  <img class="mySlides" src="css.jpg" style="width:100%">
+  <img class="mySlides" src="bridge.jpg" style="width:100%">
+  <img class="mySlides" src="uw.jpg" style="width:100%">
+  <img class="mySlides" src="mountain.jpg" style="width:100%">
+</header>
+  
+<script> //Javacript
+var index = 0;
+slide();
+function slide() {
+    var j;
+    var y = document.getElementsByClassName("mySlides");
+    for (j = 0; j < y.length; j++) {
+       y[j].style.display = "none";
+    }
+    index++;
+    if (index > y.length) {index = 1}
+    y[index-1].style.display = "block";
+    setTimeout(slide, 7500);
+}
+</script>
+ 
+<footer class="w3-container w3-center w3-content" style="max-width:1000px">
+  
+  <p class="w3-justify"><font face="Impact" color="black"><center><font size="5">Computer Science • Mathematics • Finance</font></center></font></p>
+</footer>
+
+
+</body>
+</html>
