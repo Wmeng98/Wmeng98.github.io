@@ -1,0 +1,58 @@
+/*Global styles*/
+
+* {
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+  
+body {
+  margin: 0;
+  background-color: gray;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 13.5px 15.5px;
+  text-decoration: none;
+  font-size: 17.5px;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1000px; 
+}
+
+/*Navigation bar styles*/
+.fixed-containter {
+  position:relative;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: rgba(0,255,0,0,0.2);
+  position: fixed;
+
+}
+
+/*Header styles*/
+
+
+
+
+
+
+
+
+/*Footer styles*/
