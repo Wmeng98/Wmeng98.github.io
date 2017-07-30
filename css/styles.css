@@ -52,6 +52,7 @@ nav {
 
 
 
+
 }
 
 .navbar a {
@@ -98,6 +99,61 @@ nav a:active{
 /*Main body styles*/
 
 
+/*auto makes profile image responsive/ can also use max width and height to keep image positioned properly*/
+.profile {
+  display: inline-block;
+  padding: 5%;
+  width: 50%;
+  max-height: 50%;
+  border-radius: 50%;
+  opacity: 0.7;
+  float: left;
+
+
+}
+
+/*for quote of the day on home*/
+
+
+.quote {
+  
+  height: 50%;
+  width: 50%;
+  /*viewport width and viewport height alow adjust font based on width or height of containing element*/
+  font-size: 9vw;
+  font-style: italic;
+  display: inline-block;
+  float: left;
+  margin-top:10%;
+  color: rgb(232, 220, 178);
+}
+
+.quote2 {
+  
+  height: 50%;
+  width: 50%;
+  font-size: 9vw;
+  font-style: italic;
+  text-align: center;
+  display: inline-block;
+  float: left;
+  color: rgb(232, 220, 178);
+}
+
+.quote3 {
+  
+  height: 50%;
+  width: 50%;
+  font-size: 9vw;
+  font-style: italic;
+  text-align: right;
+  display: inline-block;
+  float: left;
+  color: rgb(232, 220, 178);
+}
+
+
+
 /*Main test to see if boxes within main are transparent too or if can apply a z-index to change*/
 /*Update: Apparently you can!*/
 .makeit {
@@ -105,6 +161,7 @@ nav a:active{
   position: relative;
   z-index: 200;
   width: 50%;
+  clear: both;
 }
 /*-----------------------------*/
 
@@ -131,15 +188,23 @@ nav a:active{
 
 
 a {
-  padding-right: 8%;
-  padding-left: 8%;
+  padding-right: 5%;
+  padding-left: 5%;
 }
 
 
 
-img {
+.circ {
   
   border-radius:100%;
+  max-width: 4%;
+  max-height: 4%;
+  
+}
+
+.sqre {
+  
+  border-radius:20%;
   max-width: 4%;
   max-height: 4%;
   
@@ -173,17 +238,17 @@ footer h2 {
   font-weight: 700;
 }
 
-footer h2 ~ h3,p {
+footer h2 ~ h3 {
   text-align: center;
   color: rgb(179, 190, 209);
-  text-transform: uppercase;
-
-
+  font-style: italic;
 }
+
 footer p {
   clear: both;
-  font-weight: 700;
+  font-weight: 0;
   font-size: 1.2em;
+  color:lightgreen;
   }
 
 .padthai {
@@ -191,13 +256,53 @@ footer p {
 }
 
 
+
+
 /*Media Queries for responsive web design*/
-@media (max-width: 402px) {
-  nav a {
-    
-    width: 100%;
+
+/*Preface links with their written meaning!!!*/
+@media (max-width: 350px) {
+  
+  footer p:before{
+    content: "Email / Phone #: ";
+    font-style: italic;
+    color: lightgreen;
+    font-weight: 700;
+    font-size: 0.7em;
   }
 }
+
+
+
+@media (max-width: 402px) {
+  
+  nav a {
+    width: 100%;
+  }
+
+  main img {
+    padding-top: 0%;
+    background-color: none;
+
+    position: fixed;
+    top: 0;
+    right: 8%;
+
+    max-width: 57%;
+    max-height: 57%;
+  
+    z-index: 300;
+    background-color: rgba(48, 80, 99, 0.3);
+  }
+
+  .quote {
+    clear: both;
+    display: block;
+    font-size: 3em;
+  }
+}
+
+
 
 @media (max-width:600px) {
   footer h2 {
@@ -209,10 +314,6 @@ footer p {
 
   footer p {
     font-size: 0.9em;
-  }
-  img {
-    max-width: 7%;
-    max-height: 7%;
   }
 }
 
@@ -230,12 +331,11 @@ footer p {
    font-weight: 900;
    padding-bottom: 3%; 
   }
+  
   img {
-    border-radius:0;
     margin:0 auto;
-    max-width: 9%;
-    max-height: 9%;
   }
+  
   footer a {
     padding-top: 2%;
     padding-bottom: 2%;
