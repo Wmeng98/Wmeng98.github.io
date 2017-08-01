@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  border: 1px dotted red;
+/*  border: 1px dotted red;*/
   margin:0;
   padding:0;
   font-family: Helvetica, "Times New Roman";
@@ -115,7 +115,7 @@ nav a:active{
   max-width: 37%;
   max-height: 37%;
   border-radius: 50%;
-  opacity: 0.7;
+  opacity: 0.8;
   float: left;
   z-index: 300;
 
@@ -142,6 +142,8 @@ nav a:active{
   font-style: italic;
   display:inline-block;
   float: left;
+
+
 }
 
 .quote {
@@ -154,6 +156,7 @@ nav a:active{
   font-style: italic;
   color: rgb(232, 220, 178);
   font-family: "palatino";
+  text-decoration: underline;
 }
 
 .quote2 {
@@ -165,6 +168,7 @@ nav a:active{
   font-style: italic;
   color: rgb(232, 220, 178);
   font-family: "palatino";
+  text-decoration: underline;
 }
 
 .quote3 {
@@ -176,6 +180,7 @@ nav a:active{
   font-style: italic;
   color: rgb(232, 220, 178);
   font-family: "palatino";
+  text-decoration: underline;
 }
 
 
@@ -257,7 +262,68 @@ nav a:active{
 /*----------------------------- make position anything but static to animate it with jquery*/
 
 
+/* CSS for the slideshow on homepage*/
+.slideshow-container {
+  display: none;
+  max-width: 1000px;
 
+  position: relative;
+  margin: auto;
+
+  padding-bottom: 10%;
+}
+
+.mySlides {
+  display: none;
+
+}
+
+.dot {
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+
+  -webkit-transition: background-color 0.6s ease;
+  -moz-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/*fade animation*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  -moz-animation-name: fade;
+  -moz-animation-duration: 1.5s;
+
+  border-radius: 100%;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@-moz-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* _________________________________ */
 
 
 /*Recap top, bottom, left, right can help get rid of unecessary spaces!*/
@@ -369,22 +435,23 @@ footer p {
     width: 100%;
   }
 
-  main img {
-    padding-top: 0%;
-    
+  .containerimg {
+    padding:0;
+    margin: 0;
     position: fixed;
     top: 0;
-    right: 8%;
+    right:0;
 
-    max-width: 57%;
-    max-height: 57%;
+    max-width: 40%;
+    max-height: 40%;
+    border-radius: 0%;
   
     z-index: 300;
     background-color: rgba(48, 80, 99, 0.3);
   }
 
   .contain-quote {
-    margin-top:50%;
+    margin-top:35%;
     max-width: 100%;
     width: 100%;
     text-align: center;
@@ -416,29 +483,8 @@ footer p {
   .gfont {
     text-align: right;
   }
-}
 
-@media (max-width: 512px) {
-  .gfont {
-    font-size:100%;
-  }
-}
 
-@media (max-width:600px) {
-  footer h2 {
-    font-size: 0.9em;
-  }
-  footer h3 {
-    font-size: 0.9em;
-  }
-
-  footer p {
-    font-size: 0.9em;
-  }
-}
-
-@media (max-width: 370px){
-  
   footer h3 {
     display:none;
   }
@@ -463,6 +509,24 @@ footer p {
   }
 }
 
+@media (max-width: 512px) {
+  .gfont {
+    font-size:100%;
+  }
+}
+
+@media (max-width:600px) {
+  footer h2 {
+    font-size: 0.9em;
+  }
+  footer h3 {
+    font-size: 0.9em;
+  }
+
+  footer p {
+    font-size: 0.9em;
+  }
+}
 
 @media (min-width: 2216px) {
   .contain-quote {
