@@ -18,10 +18,13 @@ html, body {
 /*-------------*/
 
 body {
-  background-color: rgba(49, 68, 99, 0.8);
+  background-color:  rgba(24, 50, 56, 0.8)
+
 }
 
 main {
+  margin-top: 0;
+  clear: both;
   position: relative;
   background-image: url("../photos/hb.png");
   background-repeat: no-repeat;
@@ -29,30 +32,25 @@ main {
   z-index:50;
   min-height: 100%;
 
+
 }
 
 
 
-nav {
-  position: relative;
-  z-index: 100;
-}
   
 /*Navigation bar styles*/
 
 
 .navbar {
-  
   top: 0; /* set top 0PX from nearest ancestor */
   background-color: rgba(102,255,255,0.2);
   clear: both;
   width: 100%;
   text-decoration: none;
   position: fixed;
-
-
-
-
+  max-width: 1300px;
+  /*Since fixed the nav - completely ignores its container so nav width spans whole webpage*/
+  z-index: 900;
 }
 
 .navbar a {
@@ -66,8 +64,15 @@ header nav a {
   text-decoration: none;
   color: rgb(154, 418, 21);
   
+  -webkit-transition-property: background-color;
+  -webkit-transition-duration: 0.7s;
+
+  -moz-transition-property: background-color;
+  -moz-transition-duration: 0.7s;
+  
   transition-property: background color;
   transition-duration: 0.7s;
+
   
   font-size:1.2em;
 }
@@ -100,72 +105,156 @@ nav a:active{
 
 
 /*auto makes profile image responsive/ can also use max width and height to keep image positioned properly*/
-.profile {
-  display: inline-block;
-  padding: 5%;
-  width: 50%;
-  max-height: 50%;
+
+
+
+.containerimg {
+  display: none;
+  padding: 3%;
+
+  max-width: 37%;
+  max-height: 37%;
   border-radius: 50%;
   opacity: 0.7;
   float: left;
+  z-index: 300;
+
+
 
 
 }
 
-/*for quote of the day on home*/
 
+
+
+
+
+
+/*for quote of the day on home*/
+/*contain in a container therefore when resize quote maintains responsiveness*/
+.contain-quote {
+  padding-top: 2%;
+  width: 63%;
+  font-size:4.5vw;
+  max-width: 63%;
+  /*viewport width and viewport height alow adjust font based on width or height of containing element*/
+  
+  font-style: italic;
+  display:inline-block;
+  float: left;
+}
 
 .quote {
   
-  height: 50%;
-  width: 50%;
-  /*viewport width and viewport height alow adjust font based on width or height of containing element*/
-  font-size: 9vw;
+
+  display: none;
+  width: 100%;
+  max-width: 100%;
+
   font-style: italic;
-  display: inline-block;
-  float: left;
-  margin-top:10%;
   color: rgb(232, 220, 178);
+  font-family: "palatino";
 }
 
 .quote2 {
-  
-  height: 50%;
-  width: 50%;
-  font-size: 9vw;
-  font-style: italic;
   text-align: center;
-  display: inline-block;
-  float: left;
+  display: none;
+  width: 100%;
+  max-width: 100%;
+
+  font-style: italic;
   color: rgb(232, 220, 178);
+  font-family: "palatino";
 }
 
 .quote3 {
-  
-  height: 50%;
-  width: 50%;
-  font-size: 9vw;
-  font-style: italic;
   text-align: right;
-  display: inline-block;
-  float: left;
+  display: none;
+  width: 100%;
+  max-width: 100%;
+
+  font-style: italic;
   color: rgb(232, 220, 178);
+  font-family: "palatino";
 }
 
 
 
 /*Main test to see if boxes within main are transparent too or if can apply a z-index to change*/
 /*Update: Apparently you can!*/
-.makeit {
-  background-color: white;
+.makeitknown {
+  margin-top:5%;
+
+  max-width: 100%;
+  max-height: 200px;
+  
+  /*margin-top:24%; */
   position: relative;
   z-index: 200;
-  width: 50%;
+  
+  text-align: center;
+  background: linear-gradient(to bottom right, lightgray, transparent);
+  font-size: 250%;
   clear: both;
+  color: rgb(4, 109, 70);
+
+
+  /*animation css3*/
+  -webkit-animation-name: cool;
+  -webkit-animation-duration: 3s;
+
+
+  -moz-animation-name: cool;
+  -moz-animation-duration: 3s;
+
+
+  animation-name: cool;
+  animation-duration: 3s;
+
+
 }
-/*-----------------------------*/
 
+/* element to apply animation to ^^^^^ */
 
+@keyframes cool {
+  from {
+    opacity: 0.1;
+    font-size: 1%;
+  }
+  to {
+    font-size: 250%;
+    opacity: 0.8;
+  }
+}
+
+@-webkit-keyframes cool {
+  from {
+    opacity: 0.1;
+    font-size: 1%;
+  }
+  to {
+    font-size: 250%;
+    opacity: 0.8;
+  }
+}
+
+@-moz-keyframes cool {
+  from {
+    opacity: 0.1;
+    font-size: 1%;
+  }
+  to {
+    font-size: 250%;
+    opacity: 0.8;
+  }
+}
+
+.gfont {
+  font-family: "Georgia";
+
+/*end of animation code*/
+}
+/*----------------------------- make position anything but static to animate it with jquery*/
 
 
 
@@ -282,8 +371,7 @@ footer p {
 
   main img {
     padding-top: 0%;
-    background-color: none;
-
+    
     position: fixed;
     top: 0;
     right: 8%;
@@ -295,14 +383,46 @@ footer p {
     background-color: rgba(48, 80, 99, 0.3);
   }
 
-  .quote {
-    clear: both;
-    display: block;
-    font-size: 3em;
+  .contain-quote {
+    margin-top:50%;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .quote3 {
+    text-align: center;
+  }
+
+  .quote2 {
+    padding-left: 5%;
+  }
+  
+  .makeitknown {
+    margin-top: 0;
+    max-width: 50%;
+    font-size: 3vw;
+    display: inline-block;
+    float: left;
+    position: fixed;
+    background: none;
+    top: 0;
+    right: 0;
+    z-index: 500;
+    color: rgb(7, 104, 140);
+
+  }
+
+  .gfont {
+    text-align: right;
   }
 }
 
-
+@media (max-width: 512px) {
+  .gfont {
+    font-size:100%;
+  }
+}
 
 @media (max-width:600px) {
   footer h2 {
@@ -340,5 +460,13 @@ footer p {
     padding-top: 2%;
     padding-bottom: 2%;
     display: block;
+  }
+}
+
+
+@media (min-width: 2216px) {
+  .contain-quote {
+    font-size:2vw;
+    color: white;
   }
 }
