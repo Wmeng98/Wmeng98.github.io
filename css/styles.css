@@ -2,12 +2,15 @@
 
 * {
   box-sizing: border-box;
-/*  border: 1px dotted red;*/
+  border: 1px dotted red;
   margin:0;
   padding:0;
   font-family: Helvetica, "Times New Roman";
 }
 
+html {
+  width: 100%;
+}
 
 /*footer bottom*/
 
@@ -85,7 +88,7 @@ nav a:hover {
   
 }
 
-nav a:active{
+nav a:active {
   color: orange;
   background-color: rgba(106,23,130,0.2);
 }
@@ -102,6 +105,146 @@ nav a:active{
 
 
 /*Main body styles*/
+
+/* Grid view css*/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+  float: left;
+  padding: 0;
+  border: 1px solid red;
+}
+
+
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  /*display table needed to make content in a row be contained within row*/
+}
+
+
+.listspan {
+  width: 100%;
+  cursor: pointer;
+  margin: 1%;
+  list-style-type: none;
+}
+
+.listspan li{
+  
+  
+  z-index: 500;
+  background: lightgreen;
+  font-family: "Verdana";
+  color: rgba(209, 56, 84, 0.8);
+  font-weight: 900;
+  width: 80%
+  max-width: 80%;
+  font-size: 2.5vw;
+
+}
+
+.listspan li:hover {
+  background: rgb(209, 56, 84);
+  color:lightgreen;
+}
+
+
+#a1, #a2, #a3 {
+  display: none;
+}
+
+#a1 {
+  margin-bottom: 8%;
+}
+
+#a2 {
+  margin: 20% 0 8% 0;
+}
+
+#a3 {
+  margin: 20% 0 8% 0;
+}
+
+
+li.selected {
+  background-color: purple;
+  color: orange;
+}
+
+
+/* css for about content*/
+
+/* city detail stuff */
+
+ .detail_container {
+  position: absolute;
+  top: 20;
+  left: 40%;
+  width: 55%;
+  height: 50%;
+
+  font-family: "Arial";
+  
+  clear: both;
+  
+}
+ .list_detail {
+  
+  position: absolute;
+  
+
+  width: 100%;
+  
+  height: 100%;
+  padding: 11px 0px 0px 13px;
+  left:  2.5%;
+  color: #fff;
+}
+
+
+
+
+.list_detail_container {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*auto makes profile image responsive/ can also use max width and height to keep image positioned properly*/
@@ -215,6 +358,36 @@ nav a:active{
 
   animation-name: cool;
   animation-duration: 3s;
+}
+
+.makeitknownB {
+  margin-top:5%;
+
+  max-width: 100%;
+  max-height: 200px;
+  
+  /*margin-top:24%; */
+  position: relative;
+  z-index: 200;
+  
+  text-align: center;
+  background: linear-gradient(to bottom right, rgb(209, 56, 84), transparent);
+  font-size: 200%;
+  clear: both;
+  color: rgb(4, 109, 70);
+
+
+  /*animation css3*/
+  -webkit-animation-name: coolittle;
+  -webkit-animation-duration: 3s;
+
+
+  -moz-animation-name: coolittle;
+  -moz-animation-duration: 3s;
+
+
+  animation-name: coolittle;
+  animation-duration: 3s;
 
 
 }
@@ -254,10 +427,51 @@ nav a:active{
   }
 }
 
+@keyframes coolittle {
+  from {
+    opacity: 0.1;
+    font-size: 1%;
+  }
+  to {
+    font-size: 200%;
+    opacity: 0.8;
+  }
+}
+
+@-webkit-keyframes coolittle {
+  from {
+    opacity: 0.1;
+    font-size: 1%;
+  }
+  to {
+    font-size: 200%;
+    opacity: 0.8;
+  }
+}
+
+@-moz-keyframes coolittle {
+  from {
+    opacity: 0.1;
+    font-size: 1%;
+  }
+  to {
+    font-size: 200%;
+    opacity: 0.8;
+  }
+}
+
 .gfont {
   font-family: "Georgia";
 
 /*end of animation code*/
+}
+
+.gfontB {
+  font-family: "Verdana";
+}
+
+.gfontC {
+  font-family: "Verdana";
 }
 /*----------------------------- make position anything but static to animate it with jquery*/
 
@@ -378,10 +592,11 @@ a {
 /*------------------------------------*/
 
 footer {
-  max-width: 100%;
+  max-width: 75%;
   height: 100px;
   position: relative;
   text-align: center;
+  margin: 0 auto;
 
 }
 
@@ -484,6 +699,24 @@ footer p {
     text-align: right;
   }
 
+    .makeitknownB {
+    margin-top: 0;
+    max-width: 50%;
+    font-size: 3vw;
+    display: inline-block;
+    float: left;
+    position: fixed;
+    background: none;
+    top: 0;
+    right: 0;
+    z-index: 500;
+    color: rgb(209, 56, 84);
+
+  }
+
+  .gfontB {
+    text-align: right;
+  }
 
   footer h3 {
     display:none;
@@ -507,6 +740,60 @@ footer p {
     padding-bottom: 2%;
     display: block;
   }
+
+  /*for about page*/
+
+  .col-4 {
+    width: 100%;
+  }
+ #a1 {
+  margin-top: 35%;
+  margin-bottom: 0;
+ }
+ 
+ #a2 {
+  margin-top: 1%;
+  margin-bottom: 1%;
+ }
+
+#a3 {
+  margin-bottom: 1%;
+  margin-top: 0;
+}
+
+
+  
+
+
+  .col-8 {
+    width: 100%;
+
+  }
+
+  .list_detail {
+    display:inline-block;
+    width: 100%;
+    height: inherit;
+  }
+.detail_container {
+  position: static;
+
+}
+
+  .list_detail .list_info {
+  width: 100%;
+  height: inherit;
+  
+  font-size:1.9vw;
+}
+
+
+
+
+
+
+
+
 }
 
 @media (max-width: 512px) {
@@ -528,9 +815,35 @@ footer p {
   }
 }
 
+@media (max-width:700px) {
+  .gfontB {
+    font-size: 60%;
+  }
+}
+
+@media (max-width:720px) {
+  .gfontC {
+    font-size: 60%;
+  }
+}
+
+
+@media (min-width: 1344px) and (max-width: 2694px) {
+  .listspan li {
+    font-size:1.7vw;
+    }
+}
+
+@media (min-width: 2695px) {
+  .listspan li {
+    font-size:0.5vw;
+    }
+}
+
 @media (min-width: 2216px) {
   .contain-quote {
     font-size:2vw;
     color: white;
   }
 }
+

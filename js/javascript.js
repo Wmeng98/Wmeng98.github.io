@@ -28,8 +28,72 @@ $(document).ready(
     $('#slideshowpres').fadeIn(9000);
   });
 
+//  Fade in about button choices ...
+$(document).ready(
+  function() {
+    $('#a1').fadeIn(2000);
+  });
 
-// Js for automatic slide show on homepage
+$(document).ready(
+  function() {
+    $('#a2').fadeIn(3000);
+  });
+$(document).ready(
+  function() {
+    $('#a3').fadeIn(4000);
+  });
+
+
+
+$(document).ready(
+  function() {
+    $('ul li').removeClass('selected');
+  });
+
+
+
+
+// js for about content
+
+  $(document).ready(function() {
+
+
+
+  $('ul li').click(function(){
+    //this relates to actua ldot that was clicked on wanna get value of attribute of city that was the actual dot
+    
+    //alert($(this).attr('city') );
+
+    //selected was css rule that shifts dots to green
+    $('ul li').removeClass('selected');
+    // first remove selected dots from all the class then add selected dots to whatever we click on
+    $(this).addClass('selected');
+
+    //set up string to target the city detail with an ID of whatever city name value matches the ID inside of the city detail, amd this relates to all of the IDs in the hidden HTML that matches the city attributes
+
+    var list = '.list_detail#' + $(this).attr('list');
+    var htmlCode = $(list).html();
+    // ^^^ use to target hidden div in hidden html and pull out into new variable called html code
+    
+    //first fade out then run callback function
+    $('.detail_container').fadeOut(300, function(){
+      $('.detail_container .list_detail').html(htmlCode);
+      $('.detail_container').fadeIn(0);
+      //idea is click on dot, html fade out, change html text, and fade back in
+    });
+
+
+  });
+
+});
+
+
+
+
+
+
+
+// Js for automatic slide show on homepage, let it go as last on js code page or put in internal script in index.html
 
 var slideIndex = 0;
 showSlides();
@@ -50,3 +114,11 @@ function showSlides() {
 		dots[slideIndex-1].className += " active";
 	setTimeout(showSlides, 6000); //3 second change
 }
+
+
+// // Toggle button active perm color change for about page
+// $( "#about1" ).click(function() {
+//   $(this).toggleClass("selected");
+// });
+
+
