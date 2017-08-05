@@ -21,9 +21,10 @@ html, body {
 /*-------------*/
 
 body {
-  background-color:  rgba(24, 50, 56, 0.8)
+  background:  rgba(24, 50, 56, 0.8)
 
 }
+
 
 main {
   margin-top: 0;
@@ -405,6 +406,73 @@ li.selected {
 
 }
 
+
+.makeitknownD {
+  margin-top:5%;
+
+  max-width: 100%;
+  max-height: 200px;
+  background: linear-gradient(to bottom right, rgb(37, 53, 112), transparent);
+  
+  /*margin-top:24%; */
+  position: relative;
+  z-index: 200;
+  
+  text-align: center;
+  
+  font-size: 200%;
+  clear: both;
+  
+
+
+  /*animation css3*/
+  -webkit-animation-name: coolittle;
+  -webkit-animation-duration: 3s;
+
+
+  -moz-animation-name: coolittle;
+  -moz-animation-duration: 3s;
+
+
+  animation-name: coolittle;
+  animation-duration: 3s;
+
+
+}
+
+
+.makeitknownE {
+  margin-top:5%;
+
+  max-width: 100%;
+  max-height: 200px;
+  
+  /*margin-top:24%; */
+  position: relative;
+  z-index: 200;
+  
+  text-align: center;
+  
+  font-size: 120%;
+  clear: both;
+  color:white;
+
+
+  /*animation css3*/
+  -webkit-animation-name: coolmicro;
+  -webkit-animation-duration: 7s;
+
+
+  -moz-animation-name: coolmicro;
+  -moz-animation-duration: 7s;
+
+
+  animation-name: coolmicro;
+  animation-duration: 7s;
+
+
+}
+
 /* element to apply animation to ^^^^^ */
 
 @keyframes cool {
@@ -473,6 +541,41 @@ li.selected {
   }
 }
 
+@keyframes coolmicro {
+  from {
+    opacity: 0.1;
+    font-size: 0%;
+
+  }
+  to {
+    font-size: 120%;
+    opacity: 0.8;
+
+  }
+}
+
+@-webkit-keyframes coolmicro {
+  from {
+    opacity: 0.1;
+    font-size: 0%;
+  }
+  to {
+    font-size: 120%%;
+    opacity: 0.8;
+  }
+}
+
+@-moz-keyframes coolmicro {
+  from {
+    opacity: 0.1;
+    font-size: 0%;
+  }
+  to {
+    font-size: 120%;
+    opacity: 0.8;
+  }
+}
+
 .gfont {
   font-family: "Georgia";
 
@@ -485,7 +588,110 @@ li.selected {
 
 .gfontC {
   font-family: "Verdana";
+  color: rgba(221, 152, 73, 0.8);
 }
+
+.gfontE {
+  font-size: 120%;
+  color: gold;
+  opacity: 0.7;
+  font-weight: 700;
+}
+
+.portfolio-font {
+  color:white;
+  font-size: 100%;
+}
+
+.portfolio-fontlist {
+  color:white;
+  font-size: 100%;
+  padding-left: 15%;
+  width: 95%;
+}
+
+
+/* CSS fade in for portfolio content*/
+
+#port1 {
+  display: none;
+}
+
+/* CSS xoom in portfolio picture*/
+
+
+
+.portfolio-pic {
+  position: relative;
+  width: 60%;
+  height: 60%;
+  border-radius: 25%;
+
+
+  /*animation css3*/
+  -webkit-animation-name: zoomin;
+  -webkit-animation-duration: 6s;
+
+
+  -moz-animation-name: zoomin;
+  -moz-animation-duration: 6s;
+
+
+  animation-name: zoomin;
+  animation-duration: 6s;
+
+
+
+}
+
+
+@-webkit-keyframes zoomin {
+  from {
+    opacity: .1;
+    width: 1%;
+    height: 1%;
+
+  }
+  to {
+    opacity: 1;
+    width: 60%;
+    height: 60%;
+  }
+}
+
+@-moz-keyframes zoomin {
+  from {
+    opacity: .1;
+    width: 1%;
+    height: 1%;
+
+  }
+  to {
+    opacity: 1;
+    width: 60%;
+    height: 60%;
+  }
+}
+
+@keyframes zoomin {
+  from {
+    opacity: .1;
+    width: 1%;
+    height: 1%;
+
+  }
+  to {
+    opacity: 1;
+    width: 60%;
+    height: 60%;
+  }
+}
+
+.center-port-pic {
+  width: 60%;
+  margin-left: 12%;
+}
+
 /*----------------------------- make position anything but static to animate it with jquery*/
 
 
@@ -536,18 +742,18 @@ li.selected {
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {opacity: .4;}
+  to {opacity: 1;}
 }
 
 @-moz-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {opacity: .4;}
+  to {opacity: 1;}
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {opacity: .4;}
+  to {opacity: 1;}
 }
 
 /* _________________________________ */
@@ -731,6 +937,28 @@ footer p {
     text-align: right;
   }
 
+  .makeitknownD {
+    margin-top: 0;
+    max-width: 50%;
+    font-size: 3.5vw;
+    display: inline-block;
+    float: left;
+    position: fixed;
+    background: none;
+    top: 0;
+    right: 0;
+    z-index: 500;
+    color: rgb(7, 104, 140);
+}
+
+  .gfontC {
+    text-align: right;
+  }
+
+  .gfontE {
+    font-size: 80%
+  }
+
   footer h3 {
     display:none;
   }
@@ -799,6 +1027,10 @@ footer p {
   width: 100%;
 }
 
+.row.port {
+  margin-top: 20%;
+}
+
 .col-5 {
   width: 100%;
 }
@@ -840,9 +1072,13 @@ footer p {
 
 
 
+/* Portfolio text 404 - 573* want to make test in list smaller to make it look more */
 
-
-
+@media (min-width: 403px) and (max-width: 573px) {
+  .responsefont {
+    font-size: 0.7em;
+  }
+}
 
 
 
@@ -872,11 +1108,7 @@ footer p {
   }
 }
 
-@media (max-width:720px) {
-  .gfontC {
-    font-size: 60%;
-  }
-}
+
 
 
 @media (min-width: 1288px) and (max-width: 2694px) {
