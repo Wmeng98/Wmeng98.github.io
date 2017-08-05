@@ -744,7 +744,7 @@ footer p {
    padding-bottom: 3%; 
   }
   
-  img {
+  footer img {
     margin:0 auto;
   }
   
@@ -752,6 +752,16 @@ footer p {
     padding-top: 2%;
     padding-bottom: 2%;
     display: block;
+  }
+
+  .sqre {
+    max-width: 20%;
+    max-height: 20%;
+  }
+
+  .circ {
+    max-width: 20%;
+    max-height: 20%;
   }
 
   /*for about page*/
