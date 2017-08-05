@@ -196,8 +196,11 @@ nav a:active {
  }
 
 
+.p2 {
+/*correctional purposes*/
+}
 
-li.selected {
+li.selected.pg2 {
   background-color: purple;
   color: orange;
 }
@@ -473,6 +476,38 @@ li.selected {
 
 }
 
+.makeitknownF {
+  margin-top:5%;
+
+  max-width: 100%;
+  max-height: 200px;
+  
+  /*margin-top:24%; */
+  position: relative;
+  z-index: 200;
+  
+  text-align: center;
+  background: linear-gradient(to bottom right, rgb(89, 57, 99), transparent);
+  font-size: 200%;
+  clear: both;
+  color: rgb(170, 97, 41);
+
+
+  /*animation css3*/
+  -webkit-animation-name: coolittle;
+  -webkit-animation-duration: 3s;
+
+
+  -moz-animation-name: coolittle;
+  -moz-animation-duration: 3s;
+
+
+  animation-name: coolittle;
+  animation-duration: 3s;
+
+
+}
+
 /* element to apply animation to ^^^^^ */
 
 @keyframes cool {
@@ -701,8 +736,8 @@ li.selected {
 /* divider css */
 /* attribute selecter heregi*/
 [title="divider"] {
-  border-top: 5px solid rgba(255,255,255,0.06);
-  border-bottom: 5px solid rgba(255,255,255,0.06);
+  border-top: 5px solid rgba(255,255,255,0.095);
+  border-bottom: 5px solid rgba(255,255,255,0.095);
 
 }
 
@@ -776,6 +811,110 @@ li.selected {
 
 /*Recap top, bottom, left, right can help get rid of unecessary spaces!*/
 
+
+ /*   Contact/Resume page css styles    */
+ /*______*/
+/*______*/
+ /*___*/
+/*display table-row keeps text in box and prevents it from overflwoing !!!*/
+
+
+.fourfont {
+  font-family: "Courier New";
+  font-size: 1.3em;
+}
+
+.contactfont {
+  /*display block contains text within the box...*/
+  display: block;
+  font-family: 'Courier New';
+  color: gold;
+  padding: 1%;
+  max-width: 100%;
+  border: 3px solid rgb(128,0,32);
+  text-align: center;
+  background-color: black;
+  
+  cursor: pointer;
+  font-size: auto;
+  
+}
+
+#panel {
+  display: block;
+  margin-top: 10%;
+  text-align: left;
+  padding: 5%;
+  display: none;
+  width: 100%;
+
+
+  color: gold;
+  
+
+
+  background-color: black;
+}
+
+#panel2 {
+  display: block;
+  margin-top: 10%;
+  text-align: left;
+  padding: 5%;
+  display: none;
+  width: 100%;
+
+
+  color: gold;
+  
+
+
+  background-color: black;
+}
+
+#panel3 {
+  display: block;
+  margin-top: 10%;
+  text-align: left;
+  padding: 5%;
+  display: none;
+  width: 100%;
+
+
+  color: gold;
+  
+
+
+  background-color: black;
+}
+
+.button_style {
+  margin: 0;
+  width: 100%;
+  padding-top: 3.1%;
+  padding-bottom: 2%;
+  border: none;
+  color: white;
+  background-color: darkred;
+  cursor: pointer;
+}
+
+
+#clickit, #clickit2, #clickit3 {
+  display: none;
+}
+
+.center {
+  display: block;
+  width: 70%;
+
+  margin:0 auto;
+  padding: 0;
+}
+
+
+
+/* _______________________________________      */
 
 
 /*Footer styles*/
@@ -945,6 +1084,20 @@ footer p {
     right: 0;
     z-index: 500;
     color: rgb(209, 56, 84);
+
+  }
+
+    .makeitknownF {
+    margin-top: 0;
+    max-width: 50%;
+    font-size: 5vw;
+    display: inline-block;
+    float: left;
+    position: fixed;
+    background: none;
+    top: 0;
+    right: 0;
+    z-index: 500;
 
   }
 
@@ -1137,6 +1290,23 @@ footer p {
 
 
 
+/*responsive css for contact/about page*/
+.contactfontpad1 {
+  margin-top: 40%;
+}
+
+.contactfont, .fourfont {
+  font-size: 4vw;
+}
+
+
+
+
+
+
+
+
+
 
 
 /*402px mobile resizing*/
@@ -1189,6 +1359,15 @@ footer p {
   }
 }
 
+@media (max-width: 978px) {
+  #panel {
+    font-size: 1.3vw;
+  }
+  
+  #panel2 {
+  font-size: 1.3vw;
+  }
+}
 
 
 

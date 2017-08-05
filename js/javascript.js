@@ -8,14 +8,14 @@ $(document).ready(
 
 $(document).ready(
   function() {
-    $('#q2').fadeIn(8000);
+    $('#q2').fadeIn(7000);
   });
 
 
 
 $(document).ready(
   function() {
-    $('#q3').fadeIn(10000);
+    $('#q3').fadeIn(8000);
   });
 
 $(document).ready(
@@ -36,11 +36,11 @@ $(document).ready(
 
 $(document).ready(
   function() {
-    $('#a2').fadeIn(3000);
+    $('#a2').delay(100).fadeIn(2000);
   });
 $(document).ready(
   function() {
-    $('#a3').fadeIn(4000);
+    $('#a3').delay(100).fadeIn(3000);
   });
 
 $(document).ready(
@@ -49,8 +49,47 @@ $(document).ready(
   });
 
 
+// Contact/About panel Jquery code
+$(document).ready(function() {
+  $('#clickit').click(function() {
+    $('#panel').slideToggle('slow');
+  });
+});
 
 
+$(document).ready(function() {
+  $('#clickit2').click(function() {
+    $('#panel2').slideToggle('slow');
+  });
+});
+
+$(document).ready(function() {
+  $('#clickit3').click(function() {
+    $('#panel3').slideToggle('slow');
+  });
+});
+
+
+// fade in for contact slide toggle buttons
+$(document).ready(
+  function() {
+    $('#clickit').fadeIn(5000);
+  });
+
+  $(document).ready(
+  function() {
+    $('#clickit2').delay(1000).fadeIn(5000);
+  });
+
+  $(document).ready(
+  function() {
+    $('#clickit3').delay(2000).fadeIn(5000);
+  });
+// ____________________
+
+
+
+// __________________________________
 
 
 
