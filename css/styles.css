@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  border: 1px dotted red;
+/*  border: 1px dotted red;*/
   margin:0;
   padding:0;
   font-family: "Trebuchet MS", "Times New Roman";
@@ -745,12 +745,14 @@ footer p {
   }
   
   footer img {
+    padding-top:2%;
+    padding-bottom: 2%;
     margin:0 auto;
   }
   
   footer a {
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     display: block;
   }
 
