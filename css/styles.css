@@ -123,7 +123,7 @@ nav a:active {
 [class*="col-"] {
   float: left;
   padding: 0;
-  border: 1px solid red;
+/*  border: 1px solid red;*/
 }
 
 
@@ -696,7 +696,7 @@ footer p {
   .makeitknown {
     margin-top: 0;
     max-width: 50%;
-    font-size: 3vw;
+    font-size: 3.5vw;
     display: inline-block;
     float: left;
     position: fixed;
@@ -715,7 +715,7 @@ footer p {
   .makeitknownB {
     margin-top: 0;
     max-width: 50%;
-    font-size: 3vw;
+    font-size: 5vw;
     display: inline-block;
     float: left;
     position: fixed;
