@@ -45,8 +45,9 @@ $(document).ready(
 
 $(document).ready(
   function() {
-    $('#port1').fadeIn(5000);
+    $('#port1').fadeIn(10000);
   });
+
 
 
 
