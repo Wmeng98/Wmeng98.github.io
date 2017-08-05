@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  border: 1px dotted red;
+/*  border: 1px dotted red;*/
   margin:0;
   padding:0;
   font-family: "Trebuchet MS", "Times New Roman";
@@ -699,7 +699,7 @@ li.selected {
 }
 
 /* divider css */
-/* attribute selecter here*/
+/* attribute selecter heregi*/
 [title="divider"] {
   border-top: 5px solid white;
   border-bottom: 5px solid white;
