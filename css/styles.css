@@ -654,7 +654,7 @@ li.selected.pg2 {
 
 /* CSS fade in for portfolio content*/
 /*add more id here for when portfolio grows*/
-#port1 {
+#port1, #port2 {
   display: none;
 }
 

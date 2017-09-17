@@ -48,6 +48,11 @@ $(document).ready(
     $('#port1').fadeIn(10000);
   });
 
+$(document).ready(
+  function() {
+    $('#port2').fadeIn(12500);
+  });
+
 
 // Contact/About panel Jquery code
 $(document).ready(function() {
