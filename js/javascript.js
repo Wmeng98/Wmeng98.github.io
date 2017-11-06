@@ -53,6 +53,11 @@ $(document).ready(
     $('#port2').fadeIn(12500);
   });
 
+  $(document).ready(
+    function() {
+      $('#port3').fadeIn(12500);
+    });
+
 
 // Contact/About panel Jquery code
 $(document).ready(function() {
@@ -114,7 +119,7 @@ $(document).ready(
 
   $('ul li').click(function(){
     //this relates to actua ldot that was clicked on wanna get value of attribute of city that was the actual dot
-    
+
     //alert($(this).attr('city') );
 
     //selected was css rule that shifts dots to green
@@ -127,7 +132,7 @@ $(document).ready(
     var list = '.list_detail#' + $(this).attr('list');
     var htmlCode = $(list).html();
     // ^^^ use to target hidden div in hidden html and pull out into new variable called html code
-    
+
     //first fade out then run callback function
     $('.detail_container').fadeOut(300, function(){
       $('.detail_container .list_detail').html(htmlCode);
@@ -173,5 +178,3 @@ function showSlides() {
 // $( "#about1" ).click(function() {
 //   $(this).toggleClass("selected");
 // });
-
-
