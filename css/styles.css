@@ -41,7 +41,7 @@ main {
 
 
 
-  
+
 /*Navigation bar styles*/
 
 
@@ -67,26 +67,26 @@ main {
 header nav a {
   text-decoration: none;
   color: rgb(154, 418, 21);
-  
+
   -webkit-transition-property: background-color;
   -webkit-transition-duration: 0.7s;
 
   -moz-transition-property: background-color;
   -moz-transition-duration: 0.7s;
-  
+
   transition-property: background color;
   transition-duration: 0.7s;
 
-  
+
   font-size:1.2em;
 }
 
 nav a:hover {
-  
+
   color: rgba(200,6,93,0.2);
   cursor: pointer;
   background: rgba(50,340,60,0.2);
-  
+
 }
 
 nav a:active {
@@ -146,7 +146,7 @@ nav a:active {
 }
 
 .listspan li{
-  
+
   font-size: 2vw;
   z-index: 500;
   background: lightgreen;
@@ -155,7 +155,7 @@ nav a:active {
   font-weight: 900;
   width: 80%;
   max-width: 80%;
-  
+
 
 }
 
@@ -212,14 +212,14 @@ li.selected.pg2 {
 
  .detail_container {
     position: relative;
-   
-  
-  
-  
+
+
+
+
 }
- 
+
 .list_detail {
-  
+
   position: relative;
   font-size: 1.6vw;
 
@@ -227,7 +227,7 @@ li.selected.pg2 {
   height: 100%;
   color: #fff;
 }
- 
+
 
 .col-8 {
   position: relative;
@@ -298,7 +298,7 @@ li.selected.pg2 {
   font-size:4.5vw;
   max-width: 63%;
   /*viewport width and viewport height alow adjust font based on width or height of containing element*/
-  
+
   font-style: italic;
   display:inline-block;
   float: left;
@@ -307,7 +307,7 @@ li.selected.pg2 {
 }
 
 .quote {
-  
+
 
   display: none;
   width: 100%;
@@ -352,11 +352,11 @@ li.selected.pg2 {
 
   max-width: 100%;
   max-height: 200px;
-  
+
   /*margin-top:24%; */
   position: relative;
   z-index: 200;
-  
+
   text-align: center;
   background: linear-gradient(to bottom right, lightgray, transparent);
   font-size: 250%;
@@ -382,11 +382,11 @@ li.selected.pg2 {
 
   max-width: 100%;
   max-height: 200px;
-  
+
   /*margin-top:24%; */
   position: relative;
   z-index: 200;
-  
+
   text-align: center;
   background: linear-gradient(to bottom right, rgb(209, 56, 84), transparent);
   font-size: 200%;
@@ -416,16 +416,16 @@ li.selected.pg2 {
   max-width: 100%;
   max-height: 200px;
   background: linear-gradient(to bottom right, rgb(37, 53, 112), transparent);
-  
+
   /*margin-top:24%; */
   position: relative;
   z-index: 200;
-  
+
   text-align: center;
-  
+
   font-size: 200%;
   clear: both;
-  
+
 
 
   /*animation css3*/
@@ -449,13 +449,13 @@ li.selected.pg2 {
 
   max-width: 100%;
   max-height: 200px;
-  
+
   /*margin-top:24%; */
   position: relative;
   z-index: 200;
-  
+
   text-align: center;
-  
+
   font-size: 120%;
   clear: both;
   color:white;
@@ -481,11 +481,11 @@ li.selected.pg2 {
 
   max-width: 100%;
   max-height: 200px;
-  
+
   /*margin-top:24%; */
   position: relative;
   z-index: 200;
-  
+
   text-align: center;
   background: linear-gradient(to bottom right, rgb(89, 57, 99), transparent);
   font-size: 200%;
@@ -654,7 +654,7 @@ li.selected.pg2 {
 
 /* CSS fade in for portfolio content*/
 /*add more id here for when portfolio grows*/
-#port1, #port2 {
+#port1, #port2, #port3 {
   display: none;
 }
 
@@ -834,10 +834,10 @@ li.selected.pg2 {
   border: 3px solid rgb(128,0,32);
   text-align: center;
   background-color: black;
-  
+
   cursor: pointer;
   font-size: auto;
-  
+
 }
 
 #panel {
@@ -850,7 +850,7 @@ li.selected.pg2 {
 
 
   color: gold;
-  
+
 
 
   background-color: black;
@@ -866,7 +866,7 @@ li.selected.pg2 {
 
 
   color: gold;
-  
+
 
 
   background-color: black;
@@ -882,7 +882,7 @@ li.selected.pg2 {
 
 
   color: gold;
-  
+
 
 
   background-color: black;
@@ -924,7 +924,7 @@ li.selected.pg2 {
   padding-bottom: 2%;
 
 
-  
+
 
 }
 
@@ -937,19 +937,19 @@ a {
 
 
 .circ {
-  
+
   border-radius:100%;
   max-width: 4%;
   max-height: 4%;
-  
+
 }
 
 .sqre {
-  
+
   border-radius:20%;
   max-width: 4%;
   max-height: 4%;
-  
+
 }
 
 .contact-info a:hover {
@@ -1005,7 +1005,7 @@ footer p {
 
 /*Preface links with their written meaning!!!*/
 @media (max-width: 350px) {
-  
+
   footer p:before{
     content: "Email / Phone #: ";
     font-style: italic;
@@ -1018,7 +1018,7 @@ footer p {
 
 
 @media (max-width: 402px) {
-  
+
   nav a {
     width: 100%;
   }
@@ -1033,7 +1033,7 @@ footer p {
     max-width: 40%;
     max-height: 40%;
     border-radius: 0%;
-  
+
     z-index: 300;
     background-color: rgba(48, 80, 99, 0.3);
   }
@@ -1052,7 +1052,7 @@ footer p {
   .quote2 {
     padding-left: 5%;
   }
-  
+
   .makeitknown {
     margin-top: 0;
     max-width: 50%;
@@ -1134,18 +1134,18 @@ footer p {
   footer h2 {
    width: 50%;
 /*margin is used to center align containers and boxes!!!*/
-   margin: 0 auto;   
+   margin: 0 auto;
    font-size:0.8em;
    font-weight: 900;
-   padding-bottom: 3%; 
+   padding-bottom: 3%;
   }
-  
+
   footer img {
     padding-top:2%;
     padding-bottom: 2%;
     margin:0 auto;
   }
-  
+
   footer a {
     padding-top: 3%;
     padding-bottom: 3%;
@@ -1167,7 +1167,7 @@ footer p {
 .col-4 {
     width: 100%;
   }
- 
+
 .listspan {
   margin-top: 40%;
 }
@@ -1175,7 +1175,7 @@ footer p {
 #a1 {
   margin: 1% auto;
  }
- 
+
 #a2 {
   margin: 1% auto;
  }
@@ -1221,7 +1221,7 @@ footer p {
 .list_detail .list_info {
   width: 100%;
   height: inherit;
-  
+
   font-size: 4vw;
   }
 
@@ -1363,7 +1363,7 @@ footer p {
   #panel {
     font-size: 1.3vw;
   }
-  
+
   #panel2 {
   font-size: 1.3vw;
   }
