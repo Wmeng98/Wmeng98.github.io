@@ -7,7 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <link href="https://file.myfontastic.com/LFD9aGV3rwcANcuMuDHQb9/ic">
-<title>Wilson Meng</title>
+<script src="https://use.fontawesome.com/1e37d71f09.js"></script>
+<title>Wilson Meng Contact</title>
 </head>
 <!--  -->
 
@@ -29,11 +30,13 @@
 
 
   <header>
-    <nav class="navbar">
+    <nav class="navbar" id="myNavbar">
       <a href="index.html">Home</a>
       <a href="index2.html" >About</a>
-      <a  href="index3.html">Portfolio</a>
-      <a href="index4.html" style="float:right;padding-right:1.1em;">Contact / Resume</a>
+      <a href="index3.html">Portfolio</a>
+      <a href="index4.html" style="  float:right;
+  padding-right:1.1em;"e>Contact / Resume</a>
+      <a href="javascript:void(0);" style="font-size:15px;" style="z-index: 9999;" class="nav_icon" onclick="myFunction()">&#9776;</a>
     </nav>
   </header>
 
@@ -125,13 +128,16 @@
     <p>mengwilson9@gmail.com<br>1 (403) 466 7218</p>
   </div>
 <!-- data-"____"="" can be used as attribute to store information, can use later with media queries!!! -->
-  <div class="contact-info">
-    <a href="mailto:mengwilson9@gmail.com" class="one"><img class="sqre" src="photos/gmail.JPG" alt="gmail icon"></a>
-
-    <a class="two" href="https://www.linkedin.com/in/wilson-meng-22ab41132/" target="_blank"><img class="circ" src="photos/in.JPG" alt="Linkedin"></a>
-
-    <a class="three" href="https://github.com/Wmeng98" target="_blank"><img class="circ" src="photos/github.JPG" alt="Github"></a>
-
+  <div class="contact-info row">
+    <div class="col-4">
+      <a href="mailto:mengwilson9@gmail.com" ><i class="fa fa-envelope-o fa-4x red_footer" aria-hidden="true"></i></a>
+    </div>
+    <div class="col-4">
+      <a href="https://www.linkedin.com/in/wilson-meng-22ab41132/" target="_blank"><i class="fa fa-linkedin-square fa-4x blue_footer" aria-hidden="true"></i></a> 
+    </div>
+    <div class="col-4">
+      <a href="https://github.com/Wmeng98" target="_blank"><i class="fa fa-github fa-4x black_footer" aria-hidden="true"></i></a>
+    </div>  
   </div>
 
 

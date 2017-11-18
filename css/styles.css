@@ -44,6 +44,11 @@ main {
 
 /*Navigation bar styles*/
 
+.navbar .nav_icon {
+  display: none;
+}
+
+
 
 .navbar {
   top: 0; /* set top 0PX from nearest ancestor */
@@ -55,6 +60,7 @@ main {
   max-width: 1300px;
   /*Since fixed the nav - completely ignores its container so nav width spans whole webpage*/
   z-index: 900;
+  overflow: hidden;
 }
 
 .navbar a {
@@ -922,10 +928,7 @@ li.selected.pg2 {
 .contact-info {
   display: inline-block;
   padding-bottom: 2%;
-
-
-
-
+  width: 60%;
 }
 
 
@@ -946,10 +949,21 @@ a {
 
 .sqre {
 
-  border-radius:20%;
   max-width: 4%;
   max-height: 4%;
 
+}
+
+.red_footer {
+  color: #800020;
+}
+
+.blue_footer {
+  color: #0077B5;
+}
+
+.black_footer {
+  color: black;
 }
 
 .contact-info a:hover {
@@ -1015,13 +1029,32 @@ footer p {
   }
 }
 
+/**/
+/**/
+/**/
+/*Media Queries for repsonsive Navigation Bar*/
+@media screen and (max-width: 400px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.nav_icon {
+    right: 0;
+    display: block;
+    position: fixed;
+  }
+  .navbar.responsive a {
+    display: block;
+  }
+}
+/**/
+/**/
+/**/
 
+@media (max-width: 400px) {
 
-@media (max-width: 402px) {
-
-  nav a {
+  .navbar a:not(.nav_icon) {
     width: 100%;
   }
+
+
 
   .containerimg {
     padding:0;
@@ -1039,7 +1072,8 @@ footer p {
   }
 
   .contain-quote {
-    margin-top:35%;
+    margin-top:20%;
+    padding-right: 20%;
     max-width: 100%;
     width: 100%;
     text-align: center;
@@ -1169,7 +1203,7 @@ footer p {
   }
 
 .listspan {
-  margin-top: 40%;
+  margin-top: 20%;
 }
 
 #a1 {
@@ -1196,7 +1230,7 @@ footer p {
 }
 
 .row.port {
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 .col-5 {
@@ -1292,7 +1326,7 @@ footer p {
 
 /*responsive css for contact/about page*/
 .contactfontpad1 {
-  margin-top: 40%;
+  margin-top: 10%;
 }
 
 .contactfont, .fourfont {
@@ -1395,3 +1429,4 @@ footer p {
     font-size: 1.1vw;
   }
 }
+
