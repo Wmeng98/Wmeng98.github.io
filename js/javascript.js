@@ -69,6 +69,11 @@ $(document).ready(
       $('#port3').fadeIn(12500);
     });
 
+  $(document).ready(
+    function() {
+      $('#port4').fadeIn(13500);
+    });
+
 
 // Contact/About panel Jquery code
 $(document).ready(function() {
